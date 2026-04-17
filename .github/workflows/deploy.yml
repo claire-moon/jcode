@@ -28,7 +28,7 @@ jobs:
       - name: Build Rust WASM
         run: |
           cd engine
-          wasm-pack build --target web --out-dir ../ui/src/pkg
+          wasm-pack build --target web --out-dir pkg
 
       - name: Setup Node
         uses: actions/setup-node@v4
