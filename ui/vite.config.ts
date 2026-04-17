@@ -31,7 +31,7 @@ export default defineConfig({
     build: {
         target: 'esnext',
         rollupOptions: {
-            input: resolve(__dirname, 'jcode.html')
+            input: resolve(__dirname, 'index.html')
         }
     },
 
