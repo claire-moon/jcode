@@ -2,10 +2,13 @@ import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import wasm from 'vite-plugin-wasm';
 import topLevelAwait from 'vite-plugin-top-level-await';
-import { resolve } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
-
     base: './',
 
     plugins: [
@@ -21,9 +24,7 @@ export default defineConfig({
     server: {
         port: 3000,
         fs: {
-
             allow: ['..']
-
         }
     },
 
